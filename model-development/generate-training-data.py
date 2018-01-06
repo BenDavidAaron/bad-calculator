@@ -17,6 +17,6 @@ def add_two_random_ints():
 
 number_cases = int(input("How many cases do you want to generate?\n"))
 
-with open("%s-addition-cases.csv" % number_cases, "w") as f:
+with open("%1.1E-addition-cases.csv" % number_cases, "w") as f:
 	for _ in tqdm(range(number_cases)):
 		f.writelines(add_two_random_ints())
