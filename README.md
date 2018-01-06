@@ -7,4 +7,4 @@ Machine Learning has been applied to a range of complex and pressing problems: [
 
 ### Motivations:
 
-I undertook this project to explore different types of linear models. Additionally, I wanted to complete a project, start-to-finish, within the span of one saturday afternoon. 
+I undertook this project to explore different types of linear models. Additionally, I wanted to complete a project, start-to-finish, within the span of one saturday afternoon. Hopefully this project will help someone demistify Machine Learning, or at least be good for a laugh. 
