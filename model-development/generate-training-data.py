@@ -8,6 +8,7 @@ sum,int_1,int_2\n
 '''
 
 from random import randint
+import sys
 from tqdm import tqdm
 
 def add_two_random_ints():
@@ -15,9 +16,10 @@ def add_two_random_ints():
 	int_2 = randint(1,9)
 	return "%s,%s,%s\n" % (int_1 + int_2, int_1, int_2)
 
-number_cases = int(input("How many cases do you want to generate?\n"))
+number_cases = abs(int(sys.argv[1]))
 
-with open("%1.1E cases.csv" % number_cases, "w") as f:
+print(number_cases, type(number_cases))
+with open("cases.csv", "w") as f:
 	f.writelines('A,Q1,Q2\n') 
 	for _ in tqdm(range(number_cases)):
 		f.writelines(add_two_random_ints())
