@@ -18,7 +18,6 @@ def add_two_random_ints():
 
 number_cases = abs(int(sys.argv[1]))
 
-print(number_cases, type(number_cases))
 with open("cases.csv", "w") as f:
 	f.writelines('A,Q1,Q2\n') 
 	for _ in tqdm(range(number_cases)):
