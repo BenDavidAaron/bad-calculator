@@ -7,4 +7,4 @@ train_data = pd.read_csv('cases.csv')
 lin_reg_model = LinearRegression()
 lin_reg_model.fit(train_data[['Q1','Q2']], train_data['A'])
 
-pickle.dump(lin_reg_model, open('predictor-linear.pkl', 'wb'))
+pickle.dump(lin_reg_model, open('predictor-lr.pkl', 'wb'))
