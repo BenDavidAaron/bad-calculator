@@ -1,0 +1,27 @@
+<!doctype html>
+<title>AI Powered Calculator!</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static', filename='style.css')}}'>
+<div class=page>
+  <h1>bad-calculator</h1>
+  <p>
+  	Welcome to my "bad" calculator, This calulator adds (unfortunately it does not subtract) two numbers using the user's choice of statistical model: <i>Least Squares Linear Regression</i> or <i>Stochastic Gradient Descent</i>. 
+  </p>
+  <form id='numbers' method="post">
+    Pick two Numbers
+    <br>
+    <input type="text" name="number1" value="n1" size="5" maxlength="5"> 
+    + 
+    <input type="text" name="number2" value="n2" size="5" maxlength="5">
+    <br>
+    Pick a model to compute the sum
+    <br>
+    <input type='submit' value='Least Squares Regression' />
+    <input type='submit' value='Stochastic Gradient Descent' /> 
+  </form>
+  <h3>Why?</h3>
+  <p>
+  	<i>Why preform a simple task in a simple way, when you can preform a simple task in a complex way?</i>
+  	<br>
+  	Machine Learning has been applied to a range of complex and pressing problems: <a href = https://www.ibm.com/blogs/research/2016/11/identifying-skin-cancer-computer-vision/>identifying cancer tumors</a> and <a href=https://www.nature.com/news/artificial-intelligence-called-in-to-tackle-lhc-data-deluge-1.18922>classifiying particle collsions</a>. However, has anybody previously applied these statistical methods to <u>the addition of two integers</u>? Today, we step into the bold unknown!
+  </p>
+</div>
