@@ -6,7 +6,7 @@ app.vars = {}
 @app.route('/', methods =['GET', 'POST'])
 def index():
     if request.method == 'GET':
-    	return "GET request" #render_template('index.html')
+    	return render_template('index.html')
     else:
         return "POST request" #render_template('index.html')
 if __name__ == "__main__":
