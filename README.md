@@ -1,5 +1,5 @@
 # bad-calculator
-Webapp simulating a two function calculator, powered by Scikit Learn
+A [webapp](https://bad-calculator.herokuapp.com/) simulating a two function calculator, powered by Scikit Learn
 
 *Why preform a simple task in a simple way, when you can preform a simple task in a _complex_ way?*
 
