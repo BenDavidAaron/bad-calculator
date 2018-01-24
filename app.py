@@ -17,26 +17,18 @@ def index():
 		return render_template('index.html', sum = 0, n1 = 0, n2 = 0)
 
 	else:
-		app.vars['n1'] = request.form['number1']
-		app.vars['n2'] = request.form['number2']
-
 		if request.form['submit'] == 'L2 Regression':
-			print("selected L2Reg")
 			predictor = pickle.load(open('model-development/predictor-lr.pkl', 'rb'))
-			n1 = int(app.vars['n1'])
-			n2 = int(app.vars['n2'])
-			app.vars['sum'] = findSum(n1, n2, predictor)
-
 		elif request.form['submit'] == 'Gradient Descent':
-			print("slected GDReg")
 			predictor = pickle.load(open('model-development/predictor-gd.pkl', 'rb'))
-			n1 = int(app.vars['n1'])
-			n2 = int(app.vars['n2'])
-			app.vars['sum'] = findSum(n1, n2, predictor)
-
 		else:
-			app.vars['sum'] = "something went wrong"
-
+			return render_template('index.html', sum = "couldn't load model", n1 = app.vars['n1'], n2 = app.vars['n2'])
+		try:
+			app.vars['n1'] = request.form['number1']
+			app.vars['n2'] = request.form['number2']
+			app.vars['sum'] = findSum(float(app.vars['n1']), float(app.vars['n2']), predictor)
+		except:
+			return render_template('index.html', sum = "%s + %s" % (app.vars['n1'], app.vars['n2']), n1 = app.vars['n1'], n2 = app.vars['n2'])
 		return render_template('index.html', sum = app.vars['sum'], n1 = app.vars['n1'], n2 = app.vars['n2'])
 
 if __name__ == "__main__":
