@@ -12,8 +12,8 @@ import sys
 from tqdm import tqdm
 
 def add_two_random_ints():
-	int_1 = randint(1,9)
-	int_2 = randint(1,9)
+	int_1 = randint(0,999)
+	int_2 = randint(0,999)
 	return "%s,%s,%s\n" % (int_1 + int_2, int_1, int_2)
 
 number_cases = abs(int(sys.argv[1]))
